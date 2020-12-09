@@ -1,4 +1,4 @@
-from qiskit import QuantumCircuit, execute, Aer, IBMQ
+from qiskit import QuantumCircuit, execute, Aer
 from qiskit.quantum_info.synthesis import OneQubitEulerDecomposer
 from qiskit.quantum_info.synthesis.two_qubit_decompose import two_qubit_cnot_decompose
 
@@ -15,6 +15,7 @@ from scipy.linalg import fractional_matrix_power as pwr
 from random import random, choice
 
 try:
+    from qiskit import IBMQ
     IBMQ.load_account()
 except:
     print('An IBMQ account could not be loaded')
